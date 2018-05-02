@@ -1,0 +1,24 @@
+struct Node{
+ int data;
+ Node *link;   //in c style struct Node *link;
+};
+//our head node                                 
+Node *A = Null; 
+/*in c                                      
+Node *temp = (Node*)malloc(sizeof(Node));*/
+                                            //some concepts
+//create node and insert data              //(*temp).data = 2; alternative syntax temp->data=2; 
+Node *temp = new Node();                  //(*temp).link = Null;alternative syntax temp->link=Null; 
+temp->data=2;                            //  A = temp;
+temp->link=Null;                        //  now A points to newly created node 
+A = temp;  
+Node *temp = new Node();                 
+temp->data=4;                                          
+temp->link=Null;                                      
+//traversing list to the end 
+Node *temp1 = A;
+while(temp1->link!=Null){
+    temp1=temp1->link
+}
+//now ponit last node to new node   
+temp1->link = temp;
